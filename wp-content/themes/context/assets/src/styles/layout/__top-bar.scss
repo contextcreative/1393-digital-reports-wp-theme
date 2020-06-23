@@ -6,6 +6,8 @@
 	transition: 0.35s ease all;
 	padding: 1rem;
 	z-index: 8;
+	background: $white;
+	border-bottom: solid 1px rgba($black, 0.25);
 
 	&.is-hiding {
 		transform: translateY(-100%);
@@ -27,7 +29,6 @@
 .top-bar__logo {
 
 	img {
-		max-width: 100px;
 		width: 100%;
 		height: auto;
 	}

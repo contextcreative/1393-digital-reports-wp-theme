@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_localboilerwp' );
+define( 'DB_NAME', 'wp_1393_digitalreporttheme_local' );
 
 /** MySQL database username */
 define( 'DB_USER', 'contextadmin' );

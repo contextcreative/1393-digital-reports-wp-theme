@@ -8,7 +8,7 @@
 
 		// grab the "site idenity" section 
 		// after a settings has been created it gets converted into an object with methods. so to edit the already existing sections that is out-of-the-box from wp, you have to treate them like properties. 
-		$wp_customize->get_section( 'title_tagline' )->title		= 'General';
+		// $wp_customize->get_section( 'title_tagline' )->title		= 'General';
 
 
 
@@ -23,9 +23,12 @@
 
 		/* Custom Customizer Sections
         ============================================= */
+        context_colours_customizer_section( $wp_customize );
 		context_social_customizer_section( $wp_customize );
 		context_misc_customizer_section( $wp_customize );
 		context_footer_customizer_section( $wp_customize );
+		context_topbar_customizer_section( $wp_customize );
 	}
+
 
 ?>

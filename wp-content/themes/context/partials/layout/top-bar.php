@@ -1,10 +1,38 @@
-<div class="top-bar js--top-bar" style="background: green; color: white; font-size: 30px;">
+<?php
+
+/* Customize Styles
+============================================= */
+$topBarBackground	=	'#fff';
+if( get_theme_mod( 'context_topbar_background' ) ) $topBarBackground	=	get_theme_mod( 'context_topbar_background' );
+
+$logoMaxWidth	=	100;
+if( get_theme_mod( 'context_topbar_logo_size' ) ) $logoMaxWidth	=	get_theme_mod( 'context_topbar_logo_size' );
+
+if( has_custom_logo() ){
+	$customLogoId 	=	get_theme_mod( 'custom_logo' );
+	$customLogoUrl	=	wp_get_attachment_url( $customLogoId  );
+}
+
+?>
+
+<div class="top-bar js--top-bar" style="background: <?php echo $topBarBackground; ?>">
 	<div class="wrapper">
 		<div class="row">
 			<!-- Logo
 		    ============================================= -->
 			<div class="top-bar__logo col-xs-3">
 				<?php
+
+					if( has_custom_logo() ){
+						echo '<a href="' . home_url( '/' ) . '">';
+						echo '<img src="' . $customLogoUrl . '" alt="" style="max-width: ' . $logoMaxWidth . 'px;"/>';
+						echo '</a>';
+					}
+
+				?>
+
+
+				<?php /*
 
 					if( has_custom_logo() ){
 						the_custom_logo();
@@ -14,7 +42,7 @@
 						<?php
 					}
 
-				?>
+				 */?>
 			</div>
 			<!-- Logo [END] -->
 
@@ -41,13 +69,13 @@
 
 			<!-- Top Bar Search
 		    ============================================= -->
-		    <div class="col-xs-3">
-		    	<button class="top-bar__search-toggle js--top-bar__search-toggle"><i role="img" aria-label="open search panel" class="icon-search"></i><span class="e-reader-only">open search panel</span></button>
-		    </div>
 		    <?php
 
 		    	if( get_theme_mod( 'context_header_show_search' ) ){
 		    		?>
+		    			<div class="col-xs-3">
+					    	<button class="top-bar__search-toggle js--top-bar__search-toggle"><i role="img" aria-label="open search panel" class="icon-search"></i><span class="e-reader-only">open search panel</span></button>
+					    </div>
 			    		<div class="top-bar__search">
 					    	<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
@@ -81,7 +109,7 @@
 	</div>
 </div>
 
-<div class="top-bar__page-padding-top"></div>
+<div class="top-bar__page-padding-top js--top-bar__page-padding-top"></div>
 
 <div class="in-mobile">
 	<div class="top-bar__mobile-menu js--top-bar__mobile-menu">

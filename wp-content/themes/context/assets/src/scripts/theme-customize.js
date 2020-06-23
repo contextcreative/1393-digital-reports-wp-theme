@@ -2,6 +2,7 @@
 
 
 
+
 	/* Smoothly Show/Hide Top Bar Search in Customizer
 	============================================= */
 	wp.customize( 'context_header_show_search', function( val ){
@@ -13,6 +14,7 @@
 			}
 		} );
 	} );
+
 
 
 

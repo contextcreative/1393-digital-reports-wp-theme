@@ -26,7 +26,7 @@ var browserSync = require('browser-sync').create();
  * create const var for localhost url
 ============================================= */
 
-const LOCALSERVER = "local.boiler-wp";
+const LOCALSERVER = "local.digital-report-theme";
 
 
 

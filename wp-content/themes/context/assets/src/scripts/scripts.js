@@ -1,6 +1,7 @@
 /* INDEX
 =============================================
  * Scroll Throttle
+ * Resize Throttle
  * On Page Scroll
  * Top Bar Search
  * Back to Top
@@ -10,6 +11,8 @@
  * Popover Content Functions
  * Footnote
  * Accessible Cards
+ * Smooth Scroll
+ * Page Padding Top
 ============================================= */
 
 
@@ -31,6 +34,29 @@ jQuery(document).ready(function($) {
 				onPageScroll();
 				scrollThrottle = null;
 			},75);
+		}
+	});
+	/* Scroll Throttle [END] */
+
+
+
+
+	/* Resize Throttle
+	============================================= */
+	// * create and empty var
+	var resizeThrottle;
+
+	// * on reisze of window execute code
+	$(window).bind('resize',function(){
+
+		// * check if resizeThrottle is null, if it is execute function and reset to null. do this every 150ms;
+		// * throttling will help with the CPU and load time of a website.
+		if (!resizeThrottle) {
+			resizeThrottle = setTimeout(function(){
+				
+				pagePaddingTop();
+				resizeThrottle = null;
+			},150);
 		}
 	});
 	/* Scroll Throttle [END] */
@@ -272,6 +298,19 @@ jQuery(document).ready(function($) {
 		}, 1000);
 	});
 	/* Smooth Scroll [END] */
+
+
+
+
+	/* Page Padding Top
+	============================================= */
+	function pagePaddingTop(){
+		var topBarHeight = $('.js--top-bar').outerHeight();
+		$('.js--top-bar__page-padding-top').height(topBarHeight);
+	}
+
+	pagePaddingTop();
+	/* Page Padding Top [END] */
 
 
 

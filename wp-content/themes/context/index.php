@@ -19,10 +19,9 @@
 
 
                 
-                <!-- Post Filters
+                <!-- Static Content
                 ============================================= -->
-                <?php get_template_part( 'partials/reusables/filters', 'posts' ); ?>
-
+                
 
 
 
