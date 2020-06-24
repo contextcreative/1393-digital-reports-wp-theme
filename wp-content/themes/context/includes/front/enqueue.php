@@ -29,6 +29,18 @@
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'context_scripts' );
+
+	}
+
+
+	/* admin_enqueue_scripts
+	============================================= */
+	function context_customizer_enhancements(){
+		$uri = get_theme_file_uri();
+		$ver = CONTEXT_DEV_MODE ? time() : false;
+
+		wp_register_style( 'context_customizer_styles', $uri . '/assets/dist/css/customizer-main.css', [], $ver );
+		wp_enqueue_style( 'context_customizer_styles' );
 	}
 
 ?>

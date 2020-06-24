@@ -29,8 +29,8 @@
            'default'            =>  '#E01A80',
         ] );
 
-        $wp_customize->add_setting( 'context_colours_link_primary', [
-           'default'            =>  '#E01A80',
+        $wp_customize->add_setting( 'context_colours_link_secondary', [
+           'default'            =>  '#DA380B',
         ] );
 
         $wp_customize->add_setting( 'context_colours_additional_one', [
@@ -38,7 +38,7 @@
         ] );
 
         $wp_customize->add_setting( 'context_colours_additional_two', [
-           'default'            =>  '#DA380B',
+           'default'            =>  '#5b5b5b',
         ] );
         
 
@@ -119,6 +119,16 @@
                 'label'         =>  __( 'Primary Link Color', 'context' ),
                 'section'       =>  'context_colours_section',
                 'settings'      =>  'context_colours_link_primary',
+            )
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control(
+            $wp_customize,
+            'context_colours_link_secondary_input',
+            array(
+                'label'         =>  __( 'Secondary Link Color', 'context' ),
+                'section'       =>  'context_colours_section',
+                'settings'      =>  'context_colours_link_secondary',
             )
         ) );
 

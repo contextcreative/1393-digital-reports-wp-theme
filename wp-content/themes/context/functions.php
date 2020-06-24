@@ -14,6 +14,7 @@
 	include( get_theme_file_path( '/includes/front/breadcrumbs.php' ) );
 	include( get_theme_file_path( '/includes/front/post-filters.php' ) );
 	include( get_theme_file_path( '/includes/front/post-views.php' ) );
+	include( get_theme_file_path( '/includes/front/custom-colour-palette.php' ) );
 	include( get_theme_file_path( '/includes/setup.php' ) );
 	include( get_theme_file_path( '/includes/widgets.php' ) );
 	include( get_theme_file_path( '/includes/theme-customizer.php' ) );
@@ -36,12 +37,15 @@
 	add_action( 'customize_preview_init', 'context_customize_preview_init' );
 	add_action( 'wp_ajax_post_filter', 'context_post_filters_function' ); // wp_ajax_{ACTION HERE} 
 	add_action( 'wp_ajax_nopriv_post_filter', 'context_post_filters_function' ); // wp_ajax_nopriv_{ACTION HERE} 
+	add_action( 'customize_controls_enqueue_scripts', 'context_custom_color_palettes' );
+	add_action( 'admin_enqueue_scripts', 'context_customizer_enhancements' );
 
 
 
 
 	/* Shortcodes
 	============================================= */
+
 
 
 

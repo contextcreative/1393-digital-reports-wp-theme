@@ -47,18 +47,13 @@
          *
          * More Info: https://codex.wordpress.org/Class_Reference/WP_Customize_Manager/add_control
         ============================================= */
-        $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize->add_control( new WP_Customize_Color_Control(
             $wp_customize,
             'context_topbar_background_input',
             array(
                 'label'         =>  __( 'Top bar background', 'context' ),
                 'section'       =>  'context_topbar_section',
                 'settings'      =>  'context_topbar_background',
-                'type'          =>  'select',
-                'choices'       =>  array(
-                    'white'     =>  '#fff',
-                    'black'     =>  '#000',
-                ),
             )
         ) );
 
