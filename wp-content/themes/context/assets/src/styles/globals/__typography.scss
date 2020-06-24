@@ -1,3 +1,14 @@
+/* 
+ *
+ * ******* IMPORTANT NOTE ******* 
+ *
+ * if you want the admin editor font sizes to match the %body-- styles ensure to update the editor-font-sizes in the includes/setup.php
+ * --> be VERY careful editing the includes/setup.php file.
+============================================= */
+
+
+
+
 /* Text Base
 ============================================= */
 %text-base {
@@ -53,9 +64,19 @@
 	line-height: 1.2;
 }
 
+%body--huge {
+	@extend %body;
+	font-size: 1.8125rem;
+}
+
 %body--large {
 	@extend %body;
 	font-size: 1.5rem;
+}
+
+%body--medium {
+	@extend %body;
+	font-size: 1.1875rem;
 }
 
 %body--small {
@@ -160,11 +181,19 @@ button {
 	@extend %heading-six;
 }
 
-.large-text {
+.huge-text, .has-huge-font-size {
+	@extend %body--huge;
+}
+
+.large-text, .has-large-font-size {
 	@extend %body--large;
 }
 
-.small-text {
+.medium-text, .has-medium-font-size {
+	@extend %body--medium;
+}
+
+.small-text, .has-small-font-size {
 	@extend %body--small;
 }
 

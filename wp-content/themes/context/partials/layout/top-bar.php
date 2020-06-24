@@ -2,11 +2,11 @@
 
 /* Customize Styles
 ============================================= */
-$topBarBackground	=	'#fff';
-if( get_theme_mod( 'context_topbar_background' ) ) $topBarBackground	=	get_theme_mod( 'context_topbar_background' );
+// $topBarBackground	=	'#fff';
+// if( get_theme_mod( 'context_topbar_background' ) ) $topBarBackground	=	get_theme_mod( 'context_topbar_background' );
 
-$logoMaxWidth	=	100;
-if( get_theme_mod( 'context_topbar_logo_size' ) ) $logoMaxWidth	=	get_theme_mod( 'context_topbar_logo_size' );
+// $logoMaxWidth	=	100;
+// if( get_theme_mod( 'context_topbar_logo_size' ) ) $logoMaxWidth	=	get_theme_mod( 'context_topbar_logo_size' );
 
 if( has_custom_logo() ){
 	$customLogoId 	=	get_theme_mod( 'custom_logo' );
@@ -15,7 +15,7 @@ if( has_custom_logo() ){
 
 ?>
 
-<div class="top-bar js--top-bar" style="background: <?php echo $topBarBackground; ?>">
+<div class="top-bar js--top-bar">
 	<div class="wrapper">
 		<div class="row">
 			<!-- Logo
@@ -25,7 +25,7 @@ if( has_custom_logo() ){
 
 					if( has_custom_logo() ){
 						echo '<a href="' . home_url( '/' ) . '">';
-						echo '<img src="' . $customLogoUrl . '" alt="" style="max-width: ' . $logoMaxWidth . 'px;"/>';
+						echo '<img src="' . $customLogoUrl . '" alt="" style="max-width: 111px;"/>';
 						echo '</a>';
 					}
 
