@@ -14,18 +14,23 @@
  	}
 
  	&--no-margin {
+ 		@extend .row;
  		margin-left: 0;
  		margin-right: 0;
+ 	}
+
+ 	.row {
+ 		margin-left: -$row-gutter-width;
+		margin-right: -$row-gutter-width;
  	}
 
 }
 
 
-
-
-[class*="col"] {
+[class*="col"]:not(.wp-block-columns) {
 	margin-left: $col-gutter-width;
 	margin-right: $col-gutter-width;
+	margin-bottom: $col-margin-bottom;
 
 	&.reverse {
  		flex-direction: column-reverse;

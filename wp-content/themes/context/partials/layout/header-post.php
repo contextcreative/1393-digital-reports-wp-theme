@@ -30,7 +30,7 @@
 	    <!-- Content
 	    ============================================= -->
 	    <div class="row">
-	    	<div class="col-xs-12 col-sm-8">
+	    	<div class="col-xs-12 col-sm-12 col-md-8">
 	    		<h1 class="heading-one"><?php single_post_title(); ?></h1>
 				<p class="large-text"><?php echo strip_tags( get_the_excerpt() ); ?></p>
 	    	</div>
