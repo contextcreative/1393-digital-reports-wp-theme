@@ -11,66 +11,74 @@
 
 	<!-- Content
 	============================================= -->
-	<section id="main-content" style="padding: 30px; background: chartreuse;">
-		
-		<div class="row">
+	<section id="main-content">
+		<div class="wrapper">
+
+
+
+
+			<div class="row">
 			
 
-			<!-- Page Content
-			============================================= -->
-			<main class="post-content col-xs-8" style="background: gold; color: white; padding: 30px; font-size: 16px;">
+				<!-- Page Content
+				============================================= -->
+				<main class="post-content col-xs-12">
 
-				<?php
-					while( have_posts() ){
-						the_post();
+					<?php
+						while( have_posts() ){
+							the_post();
 
-						global $post;
-						$author_ID		= $post->post_author;
-						$author_URL		= get_author_posts_url( $author_ID );
+							global $post;
+							$author_ID		= $post->post_author;
+							$author_URL		= get_author_posts_url( $author_ID );
 
-						?>
+							?>
 
 
-						<!-- Page Content Content
-						============================================= -->
-						<div class="post-content__content" style="padding: 30px; background: darkorange;">
-							<?php the_content(); ?>
-
-							<!-- wp_link_pages
+							<!-- Page Content Content
 							============================================= -->
-							<?php get_template_part( 'partials/functions/wp-link-pages' ); ?>
-							<!-- wp_link_pages [END] -->
-							
-						</div>
-						<!-- Page Content Content [END] -->
+							<div class="post-content__content">
+								<?php the_content(); ?>
+
+								<!-- wp_link_pages
+								============================================= -->
+								<?php get_template_part( 'partials/functions/wp-link-pages' ); ?>
+								<!-- wp_link_pages [END] -->
+								
+							</div>
+							<!-- Page Content Content [END] -->
 
 
 
-						<!-- Comments
-						============================================= -->
-						<?php 
-							if( comments_open() || get_comments_number() ){
-								comments_template(); 
-							}
-						?>
-						<!-- Comments [END] -->
+							<!-- Comments
+							============================================= -->
+							<?php 
+								if( comments_open() || get_comments_number() ){
+									comments_template(); 
+								}
+							?>
+							<!-- Comments [END] -->
 
-						<?php
-					}
+							<?php
+						}
 
-				?>
+					?>
 
-			</main>
-			<!-- Page Content [END] -->
+				</main>
+				<!-- Page Content [END] -->
 
-			<?php get_sidebar(); ?>
+				<?php /* get_sidebar(); */ ?>
 
-			
-		</div>
+				
+			</div>
 
-        <!-- IMPORTANT: include clear float below every row -->
-        <div class="clear-float"></div> 
-        
+	        <!-- IMPORTANT: include clear float below every row -->
+	        <div class="clear-float"></div> 
+
+
+
+
+		</div> <!-- Wrapper [END] -->
 	</section>
 	<!-- Content [END] -->
 

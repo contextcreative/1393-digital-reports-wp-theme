@@ -4,6 +4,7 @@
 	color: $black;
 	font-family: $primary-font;
 	@include typesmooth;
+	margin-bottom: 1rem;
 }
 
 
@@ -12,26 +13,33 @@
 ============================================= */
 %heading-one {
 	@extend %text-base;
+	font-size: 4.5rem;
+	font-weight: 800;
 }
 
 %heading-two {
 	@extend %text-base;
+	font-size: 3.375rem;
 }
 
 %heading-three {
 	@extend %text-base;
+	font-size: 1.75rem;
 }
 
 %heading-four {
 	@extend %text-base;
+	font-size: 1.5rem;
 }
 
 %heading-five {
 	@extend %text-base;
+	font-size: 1.125rem;
 }
 
 %heading-six {
 	@extend %text-base;
+	font-size: 1rem;
 }
 
 
@@ -40,14 +48,18 @@
 ============================================= */
 %body {
 	@extend %text-base;
+	font-size: 1rem;
+	line-height: 1.2;
 }
 
 %body--large {
 	@extend %body;
+	font-size: 1.5rem;
 }
 
 %body--small {
 	@extend %body;
+	font-size: 0.875rem;
 }
 
 %quote-text {
@@ -66,10 +78,39 @@
 	@extend %text-base;
 }
 
+%breadcrumb {
+	@extend %text-base;
+	font-size: 0.875rem;
+}
+
 
 
 /* Base Styles
 ============================================= */
+h1 {
+	@extend %heading-one;
+}
+
+h2 {
+	@extend %heading-two;
+}
+
+h3 {
+	@extend %heading-three;
+}
+
+h4 {
+	@extend %heading-four;
+}
+
+h5 {
+	@extend %heading-five;
+}
+
+h6 {
+	@extend %heading-six;
+}
+
 p {
 	@extend %body;
 }
@@ -136,6 +177,12 @@ button {
 
 .nav-link {
 	@extend %nav-link;
+}
+
+.breadcrumbs {
+	li, a {
+		@extend %breadcrumb;
+	}
 }
 
 .e-reader-only {

@@ -81,6 +81,14 @@
 
 
 
+
+		/* Add Post Type Support
+        ============================================= */
+		add_post_type_support( 'page', 'excerpt' );
+
+
+
+
 		/* Register Nav Menu
         ============================================= */
 		register_nav_menu( 'primary', __( 'Primary Menu', 'context' ) ); // register menu
