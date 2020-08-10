@@ -18,4 +18,6 @@
 	include( get_theme_file_path( '/includes/customizer/colours.php' ) );
 	include( get_theme_file_path( '/includes/customizer/fonts-imports.php' ) );
 	include( get_theme_file_path( '/includes/customizer/fonts-globals.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-title-sizes.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-title-weights.php' ) );
 ?>

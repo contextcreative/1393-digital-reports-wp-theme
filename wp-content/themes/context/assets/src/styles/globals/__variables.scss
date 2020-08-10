@@ -9,10 +9,10 @@
 
 /* Fonts
 ============================================= */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Oswald:wght@200;400;700&display=block');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,800|Oswald:wght@200;400;700&display=block');
 
-$font-family-primary: 'Roboto', sans-serif;
-$font-family-titles: 'Oswald', sans-serif;
+$font-family-primary: serif;
+$font-family-titles: sans-serif;
 
 
 
@@ -92,6 +92,20 @@ $width-12: 100%;
 	--font-color-primary: #{$font-color-primary};
 	--font-color-titles: #{$font-color-titles};
 	--font-color-links: #{$font-color-links};
+
+	--heading-one-size: 4.5rem;
+	--heading-two-size: 3.375rem;
+	--heading-three-size: 1.75rem;
+	--heading-four-size: 1.5rem;
+	--heading-five-size: 1.25rem;
+	--heading-six-size: 1rem;
+
+	--heading-one-weight: 200;
+	--heading-two-weight: 200;
+	--heading-three-weight: 200;
+	--heading-four-weight: 200;
+	--heading-five-weight: 200;
+	--heading-six-weight: 200;
 }
 
 

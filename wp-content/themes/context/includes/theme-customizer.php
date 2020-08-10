@@ -35,6 +35,8 @@
 		context_footer_customizer_section( $wp_customize );
 		context_fonts_imports_customizer_section( $wp_customize );
 		context_fonts_globals_customizer_section( $wp_customize );
+		context_fonts_title_sizes_customizer_section( $wp_customize );
+		context_fonts_title_weights_customizer_section( $wp_customize );
 		// context_topbar_customizer_section( $wp_customize );
 	}
 

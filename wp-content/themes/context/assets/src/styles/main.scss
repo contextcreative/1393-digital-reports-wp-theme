@@ -11,6 +11,7 @@ html {
 
 body {
 	@extend %body;
+	background-color: $white;
 }
 
 .wrapper {

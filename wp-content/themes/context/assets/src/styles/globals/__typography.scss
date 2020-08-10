@@ -25,7 +25,7 @@
 	font-family: var(--font-family-titles);
 	@include typesmooth;
 	margin-bottom: 1rem;
-	font-weight: 400;
+	// font-weight: 300;
 	text-rendering: geometricPrecision;
 }
 
@@ -35,33 +35,38 @@
 ============================================= */
 %heading-one {
 	@extend %title-base;
-	font-size: 4.5rem;
-	font-weight: 800;
+	font-size: var(--heading-one-size);
+	font-weight: var(--heading-one-weight);
 }
 
 %heading-two {
 	@extend %title-base;
-	font-size: 3.375rem;
+	font-size: var(--heading-two-size);
+	font-weight: var(--heading-two-weight);
 }
 
 %heading-three {
 	@extend %title-base;
-	font-size: 1.75rem;
+	font-size: var(--heading-three-size);
+	font-weight: var(--heading-three-weight);
 }
 
 %heading-four {
 	@extend %title-base;
-	font-size: 1.5rem;
+	font-size: var(--heading-four-size);
+	font-weight: var(--heading-four-weight);
 }
 
 %heading-five {
 	@extend %title-base;
-	font-size: 1.125rem;
+	font-size: var(--heading-five-size);
+	font-weight: var(--heading-five-weight);
 }
 
 %heading-six {
 	@extend %title-base;
-	font-size: 1rem;
+	font-size: var(--heading-six-size);
+	font-weight: var(--heading-six-weight);
 }
 
 
