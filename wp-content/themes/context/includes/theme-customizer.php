@@ -20,6 +20,12 @@
 			'priority'				=>	160
 		] );
 
+		$wp_customize->add_panel( 'font-panel', [
+			'title'					=>	__( 'Fonts', 'context' ),
+			'description'			=> '<p>Font Theme Settings</p>',
+			'priority'				=>	160
+		] );
+
 
 		/* Custom Customizer Sections
         ============================================= */
@@ -27,6 +33,8 @@
 		context_social_customizer_section( $wp_customize );
 		context_misc_customizer_section( $wp_customize );
 		context_footer_customizer_section( $wp_customize );
+		context_fonts_imports_customizer_section( $wp_customize );
+		context_fonts_globals_customizer_section( $wp_customize );
 		// context_topbar_customizer_section( $wp_customize );
 	}
 

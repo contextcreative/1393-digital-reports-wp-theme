@@ -9,9 +9,11 @@
 
 /* Fonts
 ============================================= */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=block');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Oswald:wght@200;400;700&display=block');
 
-$primary-font: 'Roboto', sans-serif;
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-titles: 'Oswald', sans-serif;
+
 
 
 
@@ -19,12 +21,19 @@ $primary-font: 'Roboto', sans-serif;
 ============================================= */
 $black: #000;
 $white: #fff;
+$blue: #4265FF;
+
+$font-color-primary: $black;
+$font-color-titles: $font-color-primary;
+$font-color-links: $blue;
+
 
 
 
 /* Gradients
 ============================================= */
 $gradient: linear-gradient(180deg, rgba($white, 1) 0%, rgba($white, 0) 100%);
+
 
 
 
@@ -65,5 +74,24 @@ $width-9: 75%;
 $width-10: 83.33333333%;
 $width-11: 91.66666667%;
 $width-12: 100%;
+
+
+
+
+
+
+
+
+/* CSS Vars for Customizer
+============================================= */
+
+:root {
+	--font-family: #{$font-family-primary};
+	--font-family-titles: #{$font-family-titles};
+
+	--font-color-primary: #{$font-color-primary};
+	--font-color-titles: #{$font-color-titles};
+	--font-color-links: #{$font-color-links};
+}
 
 

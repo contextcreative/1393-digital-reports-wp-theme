@@ -12,11 +12,21 @@
 /* Text Base
 ============================================= */
 %text-base {
-	color: $black;
-	font-family: $primary-font;
+	color: var(--font-color-primary);
+	font-family: var(--font-family);
 	@include typesmooth;
 	margin-bottom: 1rem;
 	font-weight: 400;
+	text-rendering: geometricPrecision;
+}
+
+%title-base {
+	color: var(--font-color-titles);
+	font-family: var(--font-family-titles);
+	@include typesmooth;
+	margin-bottom: 1rem;
+	font-weight: 400;
+	text-rendering: geometricPrecision;
 }
 
 
@@ -24,33 +34,33 @@
 /* Headings
 ============================================= */
 %heading-one {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 4.5rem;
 	font-weight: 800;
 }
 
 %heading-two {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 3.375rem;
 }
 
 %heading-three {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 1.75rem;
 }
 
 %heading-four {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 1.5rem;
 }
 
 %heading-five {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 1.125rem;
 }
 
 %heading-six {
-	@extend %text-base;
+	@extend %title-base;
 	font-size: 1rem;
 }
 
@@ -90,6 +100,7 @@
 
 %link-text {
 	@extend %text-base;
+	color: var(--font-color-links);
 }
 
 
@@ -109,29 +120,29 @@
 
 /* Base Styles
 ============================================= */
-h1 {
-	@extend %heading-one;
-}
+// h1 {
+// 	@extend %heading-one;
+// }
 
-h2 {
-	@extend %heading-two;
-}
+// h2 {
+// 	@extend %heading-two;
+// }
 
-h3 {
-	@extend %heading-three;
-}
+// h3 {
+// 	@extend %heading-three;
+// }
 
-h4 {
-	@extend %heading-four;
-}
+// h4 {
+// 	@extend %heading-four;
+// }
 
-h5 {
-	@extend %heading-five;
-}
+// h5 {
+// 	@extend %heading-five;
+// }
 
-h6 {
-	@extend %heading-six;
-}
+// h6 {
+// 	@extend %heading-six;
+// }
 
 p {
 	@extend %body;

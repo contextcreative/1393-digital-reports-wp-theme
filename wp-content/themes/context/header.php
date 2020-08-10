@@ -38,6 +38,58 @@
 
 
 
+    <!-- Customizer Styles
+    ============================================= -->
+    <?php
+        // create vars for each customizer style
+        $globalFontFamily = get_theme_mod( 'context_global_font_family' );
+        $globalTitlesFontFamily = get_theme_mod( 'context_global_titles_font_family' );
+        $globalFontColor = get_theme_mod( 'context_global_font_color' );
+        $globalTitlesFontColor = get_theme_mod( 'context_global_titles_font_color' );
+        $globalLinksFontColor = get_theme_mod( 'context_global_links_font_color' );
+    ?>
+    <style>
+        :root {
+            <?php if ($globalFontFamily) { ?> 
+                --font-family: <?php echo $globalFontFamily; ?>; 
+            <?php } ?>
+            <?php if ($globalTitlesFontFamily) { ?> 
+                --font-family-titles: <?php echo $globalTitlesFontFamily; ?>; 
+            <?php } else { ?>
+                --font-family-titles: <?php echo $globalFontFamily; ?>; 
+            <?php } ?>
+            <?php if ($globalFontColor) { ?> 
+                --font-color-primary: <?php echo $globalFontColor; ?>; 
+            <?php } ?>
+            <?php if ($globalTitlesFontColor) { ?> 
+                --font-color-titles: <?php echo $globalTitlesFontColor; ?>; 
+            <?php } ?>
+            <?php if ($globalLinksFontColor) { ?> 
+                --font-color-links: <?php echo $globalLinksFontColor; ?>; 
+            <?php } ?>
+        }
+        .heading-one {}
+        .heading-two {}
+        .heading-three {}
+        .heading-four {}
+        .heading-five {}
+        .heading-six {}
+        p {}
+        a {}
+        .huge-text {}
+        .large-text {}
+        .medium-text {}
+        .small-text {}
+        .quote-text {}
+        .link-text {}
+        .nav-text {}
+        .breadcrumbs {}
+
+    </style>
+    <!-- Customizer Styles [END] -->
+
+
+
 </head>
 <!-- Head [END] -->
 
