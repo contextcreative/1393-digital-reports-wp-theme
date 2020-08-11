@@ -4,6 +4,7 @@
 	@extend .row;
 	margin-left: -$row-gutter-width;
 	margin-right: -$row-gutter-width;
+	margin-bottom: 0;
 }
 
 /* WP Block Columns Matching Site's Media Queries

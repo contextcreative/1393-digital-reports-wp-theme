@@ -199,6 +199,12 @@ p {
 	@extend %body;
 }
 
+.post-content__content {
+	>p {
+		margin-bottom: 3rem;
+	}
+}
+
 a {
 	@extend %link-text;
 }
@@ -217,6 +223,17 @@ button {
 
 cite {
 	@extend %cite-text;
+}
+
+ul, ol {
+	.post-content__content & {
+		li {
+			@extend %body;
+			background-color: lime;
+			padding-left: 2rem;
+			position: relative;
+		}
+	}
 }
 
 

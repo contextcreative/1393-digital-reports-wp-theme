@@ -174,21 +174,50 @@
             /* title colors */
             <?php if ( $headingOneColor ) { ?> 
                 --heading-one-color: <?php echo $headingOneColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-one-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-one-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
+
             <?php if ( $headingTwoColor ) { ?> 
                 --heading-two-color: <?php echo $headingTwoColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-two-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-two-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
+
             <?php if ( $headingThreeColor ) { ?> 
                 --heading-three-color: <?php echo $headingThreeColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-three-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-three-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
+
             <?php if ( $headingFourColor ) { ?> 
                 --heading-four-color: <?php echo $headingFourColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-four-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-four-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
+
             <?php if ( $headingFiveColor ) { ?> 
                 --heading-five-color: <?php echo $headingFiveColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-five-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-five-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
+            
             <?php if ( $headingSixColor ) { ?> 
                 --heading-six-color: <?php echo $headingSixColor; ?>;
+            <?php } else if ( $globalTitlesFontColor ) { ?>
+                --heading-six-color: <?php echo $globalTitlesFontColor; ?>;
+            <?php } else { ?>
+                --heading-six-color: <?php echo $globalFontColor; ?>;
             <?php } ?>
 
 
