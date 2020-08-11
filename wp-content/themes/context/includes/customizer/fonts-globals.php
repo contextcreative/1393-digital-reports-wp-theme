@@ -10,7 +10,7 @@
          * More Info: https://codex.wordpress.org/Class_Reference%5CWP_Customize_Manager%5Cadd_setting
         ============================================= */
 		$wp_customize->add_setting( 'context_global_font_family', [
-			'default'			=>	'"Roboto", sans-serif'
+			'default'			=>	''
 		] );
 
 
@@ -20,16 +20,16 @@
 
 
 		$wp_customize->add_setting( 'context_global_font_color', [
-			'default'			=>	'#000'
+			'default'			=>	''
 		] );
 
 
 		$wp_customize->add_setting( 'context_global_titles_font_color', [
-			'default'			=>	'#000'
+			'default'			=>	''
 		] );
 
 		$wp_customize->add_setting( 'context_global_links_font_color', [
-			'default'			=>	'#4265FF'
+			'default'			=>	''
 		] );
 
 

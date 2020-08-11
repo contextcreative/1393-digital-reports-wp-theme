@@ -37,36 +37,42 @@
 	@extend %title-base;
 	font-size: var(--heading-one-size);
 	font-weight: var(--heading-one-weight);
+	color: var(--heading-one-color);
 }
 
 %heading-two {
 	@extend %title-base;
 	font-size: var(--heading-two-size);
 	font-weight: var(--heading-two-weight);
+	color: var(--heading-two-color);
 }
 
 %heading-three {
 	@extend %title-base;
 	font-size: var(--heading-three-size);
 	font-weight: var(--heading-three-weight);
+	color: var(--heading-three-color);
 }
 
 %heading-four {
 	@extend %title-base;
 	font-size: var(--heading-four-size);
 	font-weight: var(--heading-four-weight);
+	color: var(--heading-four-color);
 }
 
 %heading-five {
 	@extend %title-base;
 	font-size: var(--heading-five-size);
 	font-weight: var(--heading-five-weight);
+	color: var(--heading-five-color);
 }
 
 %heading-six {
 	@extend %title-base;
 	font-size: var(--heading-six-size);
 	font-weight: var(--heading-six-weight);
+	color: var(--heading-six-color);
 }
 
 
@@ -99,8 +105,48 @@
 	font-size: 0.875rem;
 }
 
-%quote-text {
-	@extend %text-base;
+%blockquote-text {
+	@extend %body;
+	font-family: var(--blockquote-family);
+	font-size: var(--blockquote-size);
+	font-weight: var(--blockquote-weight);
+	color: var(--blockquote-color);
+	text-align: var(--blockquote-alignment);
+	text-transform: var(--blockquote-text-transform);
+	line-height: var(--blockquote-line-height);
+}
+
+%pullquote-text {
+	@extend %title-base;
+	font-family: var(--pullquote-family);
+	font-size: var(--pullquote-size);
+	font-weight: var(--pullquote-weight);
+	color: var(--pullquote-color);
+	text-align: var(--pullquote-alignment);
+	text-transform: var(--pullquote-text-transform);
+	line-height: var(--pullquote-line-height);
+}
+
+%cite-text {
+	@extend %body;
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-family: var(--cite-family);
+	font-size: var(--cite-size);
+	font-weight: var(--cite-weight);
+	color: var(--cite-color);
+	text-align: var(--cite-alignment);
+	text-transform: var(--cite-text-transform);
+
+	&::before {
+		content: '';
+		display: block;
+		width: 2rem;
+		height: 1px;
+		background-color: var(--cite-color);
+		margin-right: 1rem;
+	}
 }
 
 %link-text {
@@ -169,6 +215,10 @@ button {
 	@extend %link-text;
 }
 
+cite {
+	@extend %cite-text;
+}
+
 
 
 /* Classes
@@ -214,7 +264,7 @@ button {
 }
 
 .quote-text {
-	@extend %quote-text;
+	@extend %pullquote-text;
 }
 
 .link-text {
@@ -239,3 +289,16 @@ button {
     height: 1px;
     overflow: hidden;
 }
+
+.wp-block-quote p {
+	@extend %blockquote-text;
+}
+
+.wp-block-pullquote p {
+	@extend %pullquote-text;
+}
+
+.wp-block-quote cite, .wp-block-pullquote cite {
+	@extend %cite-text;
+}
+

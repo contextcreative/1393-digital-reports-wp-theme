@@ -20,4 +20,8 @@
 	include( get_theme_file_path( '/includes/customizer/fonts-globals.php' ) );
 	include( get_theme_file_path( '/includes/customizer/fonts-title-sizes.php' ) );
 	include( get_theme_file_path( '/includes/customizer/fonts-title-weights.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-title-colors.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-blockquote.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-pullquote.php' ) );
+	include( get_theme_file_path( '/includes/customizer/fonts-cite.php' ) );
 ?>

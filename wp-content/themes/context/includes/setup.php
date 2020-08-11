@@ -42,6 +42,108 @@
 
 
 
+		/*  add editor color palette  */
+		// add_theme_support( 'editor-color-palette', array(
+		//     array(
+		//         'name' => __( 'strong magenta', 'themeLangDomain' ),
+		//         'slug' => 'strong-magenta',
+		//         'color' => '#a156b4',
+		//     ),
+		//     array(
+		//         'name' => __( 'light grayish magenta', 'themeLangDomain' ),
+		//         'slug' => 'light-grayish-magenta',
+		//         'color' => '#d0a5db',
+		//     ),
+		//     array(
+		//         'name' => __( 'very light gray', 'themeLangDomain' ),
+		//         'slug' => 'very-light-gray',
+		//         'color' => '#eee',
+		//     ),
+		//     array(
+		//         'name' => __( 'very dark gray', 'themeLangDomain' ),
+		//         'slug' => 'very-dark-gray',
+		//         'color' => '#444',
+		//     ),
+		// ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function ea_setup() {
+			// Disable Custom Colors
+			add_theme_support( 'disable-custom-colors' );
+		  
+			// Editor Color Palette
+			add_theme_support( 'editor-color-palette', array(
+				array(
+					'name'  => __( 'Blue', 'context' ),
+					'slug'  => 'blue',
+					'color'	=> '#59BACC',
+				),
+				array(
+					'name'  => __( 'Green', 'context' ),
+					'slug'  => 'green',
+					'color' => '#58AD69',
+				),
+				array(
+					'name'  => __( 'Orange', 'context' ),
+					'slug'  => 'orange',
+					'color' => '#FFBC49',
+				),
+				array(
+					'name'	=> __( 'Red', 'context' ),
+					'slug'	=> 'red',
+					'color'	=> '#E2574C',
+				),
+			) );
+		}
+		add_action( 'after_setup_theme', 'ea_setup' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		/*  add support for admin editor font sizes  
 		 *  these font sizes should match the corresponding classes/vars within the typography style sheet
 		 *  --> src/styles/globals/__typography.scss file */

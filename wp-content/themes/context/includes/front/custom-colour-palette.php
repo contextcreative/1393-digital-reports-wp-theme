@@ -10,28 +10,28 @@
 
 		/* Get colours from 
 		============================================= */
-		$primary		=	get_theme_mod( 'context_colours_primary' );
-		$secondary		=	get_theme_mod( 'context_colours_secondary' );
-		$text_primary	=	get_theme_mod( 'context_colours_text_primary' );
-		$text_secondary	=	get_theme_mod( 'context_colours_text_secondary' );
-		$link_primary	=	get_theme_mod( 'context_colours_link_primary' );
-		$link_secondary	=	get_theme_mod( 'context_colours_link_secondary' );
-		$additional_one	=	get_theme_mod( 'context_colours_additional_one' );
-		$additional_two	=	get_theme_mod( 'context_colours_additional_two' );
+		$color_one		=	get_theme_mod( 'context_colours_one' );
+		$color_two		=	get_theme_mod( 'context_colours_two' );
+		$color_three	=	get_theme_mod( 'context_colours_three' );
+		$color_four		=	get_theme_mod( 'context_colours_four' );
+		$color_five		=	get_theme_mod( 'context_colours_five' );
+		$color_six		=	get_theme_mod( 'context_colours_six' );
+		$color_seven	=	get_theme_mod( 'context_colours_seven' );
+		$color_eight	=	get_theme_mod( 'context_colours_eight' );
 
 
 		/* Color Palette
 		============================================= */
 		$color_palettes = json_encode(
 			array(
-				$primary,
-				$secondary,
-				$text_primary,
-				$text_secondary,
-				$link_primary,
-				$link_secondary,
-				$additional_one,
-				$additional_two,
+				$color_one,
+				$color_two,
+				$color_three,
+				$color_four,
+				$color_five,
+				$color_six,
+				$color_seven,
+				$color_eight,
 			)
 		);
 		wp_add_inline_script( 'wp-color-picker', 'jQuery.wp.wpColorPicker.prototype.options.palettes = ' . $color_palettes . ';' );
